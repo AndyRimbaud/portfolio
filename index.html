@@ -1,264 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freddy A. Romero| Selected technical projects</title>
-    <style>
-        :root {
-            --oliva: #556B2F;
-            --salmon: #FA8072;
-            --bg: #F8F7F3; /* Color papel premium, como la web de referencia */
-            --line: rgba(85, 107, 47, 0.15);
-            --text: #2A2D24;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            /* Mezcla de elegancia clásica y lectura moderna */
-            font-family: 'Times New Roman', Times, serif;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Tipografía secundaria para UI */
-        .ui-text {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-size: 0.7rem;
-            font-weight: 500;
-        }
-
-        header {
-            padding: 10vh 5vw;
-            border-bottom: 1px solid var(--line);
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: clamp(3rem, 7vw, 4rem);
-            margin: 0;
-            font-weight: normal;
-            color: var(--oliva);
-            letter-spacing: -0.02em;
-        }
-
-        header p {
-            margin-top: 1rem;
-            font-style: italic;
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 5vw;
-        }
-
-        .intro-section {
-            padding: 8vh 0;
-            display: flex;
-            justify-content: flex-end;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .intro-text {
-            max-width: 400px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            text-align: right;
-        }
-
-        .project-grid {
-            margin: 10vh 0;
-        }
-
-        /* Fila de Proyecto inspirada en "Stories" de Pieter Koopt */
-        .project-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5vw;
-            margin-bottom: 15vh;
-            align-items: center;
-        }
-
-        .project-row:nth-child(even) {
-            direction: rtl; /* Alterna la posición para dinamismo visual */
-        }
-
-        .project-row:nth-child(even) .project-info {
-            direction: ltr;
-            text-align: left;
-        }
-
-        .project-image {
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            overflow: hidden;
-            background-color: #eee;
-            position: relative;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(20%);
-            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .project-row:hover img {
-            transform: scale(1.05);
-            filter: grayscale(0%);
-        }
-
-        .project-info {
-            padding: 2rem 0;
-        }
-
-        .project-category {
-            color: var(--salmon);
-            margin-bottom: 1rem;
-        }
-
-        .project-title {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            margin: 0 0 1.5rem 0;
-            font-weight: normal;
-            line-height: 1.1;
-        }
-
-        .project-description {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            color: rgba(0,0,0,0.7);
-            max-width: 450px;
-        }
-
-        /* Botones sutiles */
-        .btn-group {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .btn-minimal {
-            text-decoration: none;
-            color: var(--text);
-            border-bottom: 1px solid var(--salmon);
-            padding-bottom: 4px;
-            transition: all 0.3s;
-        }
-
-        .btn-minimal:hover {
-            color: var(--salmon);
-            border-bottom: 1px solid var(--oliva);
-        }
-
-        footer {
-            padding: 10vh 5vw;
-            border-top: 1px solid var(--line);
-            text-align: center;
-            background-color: var(--oliva);
-            color: var(--bg);
-        }
-
-        @media (max-width: 768px) {
-            .project-row {
-                grid-template-columns: 1fr;
-                margin-bottom: 8vh;
-            }
-            .project-row:nth-child(even) { direction: ltr; }
-            .intro-section { justify-content: flex-start; }
-            .intro-text { text-align: left; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freddy A. Romero | Proyectos de análisis de datos</title>
+<style>
+:root {
+--oliva: #556B2F;
+--salmon: #FA8072;
+--bg: #F8F7F3; /* Color papel premium, como la web de referencia */
+--line: rgba(85, 107, 47, 0.15);
+--text: #2A2D24;
+}
+* { box-sizing: border-box; }
+body {
+background-color: var(--bg);
+color: var(--text);
+margin: 0;
+/* Mezcla de elegancia clásica y lectura moderna */
+font-family: 'Times New Roman', Times, serif;
+-webkit-font-smoothing: antialiased;
+}
+/* Tipografía secundaria para UI */
+.ui-text {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+text-transform: uppercase;
+letter-spacing: 0.15em;
+font-size: 0.7rem;
+font-weight: 500;
+}
+header {
+padding: 10vh 5vw;
+border-bottom: 1px solid var(--line);
+text-align: center;
+}
+header h1 {
+font-size: clamp(3rem, 7vw, 4rem);
+margin: 0;
+font-weight: normal;
+color: var(--oliva);
+letter-spacing: -0.02em;
+}
+header p {
+margin-top: 1rem;
+font-style: italic;
+font-size: 1.2rem;
+opacity: 0.8;
+}
+.container {
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 5vw;
+}
+.intro-section {
+padding: 8vh 0;
+display: flex;
+justify-content: flex-end;
+border-bottom: 1px solid var(--line);
+}
+.intro-text {
+max-width: 400px;
+font-size: 1.1rem;
+line-height: 1.6;
+text-align: right;
+}
+.project-grid {
+margin: 10vh 0;
+}
+/* Fila de Proyecto inspirada en "Stories" de Pieter Koopt */
+.project-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 5vw;
+margin-bottom: 15vh;
+align-items: center;
+}
+.project-row:nth-child(even) {
+direction: rtl; /* Alterna la posición para dinamismo visual */
+}
+.project-row:nth-child(even) .project-info {
+direction: ltr;
+text-align: left;
+}
+.project-image {
+width: 100%;
+aspect-ratio: 4 / 3;
+overflow: hidden;
+background-color: #eee;
+position: relative;
+}
+.project-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: grayscale(20%);
+transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-row:hover img {
+transform: scale(1.05);
+filter: grayscale(0%);
+}
+.project-info {
+padding: 2rem 0;
+}
+.project-category {
+color: var(--salmon);
+margin-bottom: 1rem;
+}
+.project-title {
+font-size: clamp(2rem, 4vw, 3.5rem);
+margin: 0 0 1.5rem 0;
+font-weight: normal;
+line-height: 1.1;
+}
+.project-description {
+font-size: 1.1rem;
+line-height: 1.7;
+margin-bottom: 2rem;
+color: rgba(0,0,0,0.7);
+max-width: 450px;
+}
+/* Botones sutiles */
+.btn-group {
+display: flex;
+gap: 2rem;
+}
+.btn-minimal {
+text-decoration: none;
+color: var(--text);
+border-bottom: 1px solid var(--salmon);
+padding-bottom: 4px;
+transition: all 0.3s;
+}
+.btn-minimal:hover {
+color: var(--salmon);
+border-bottom: 1px solid var(--oliva);
+}
+footer {
+padding: 10vh 5vw;
+border-top: 1px solid var(--line);
+text-align: center;
+background-color: var(--oliva);
+color: var(--bg);
+}
+@media (max-width: 768px) {
+.project-row {
+grid-template-columns: 1fr;
+margin-bottom: 8vh;
+}
+.project-row:nth-child(even) { direction: ltr; }
+.intro-section { justify-content: flex-start; }
+.intro-text { text-align: left; }
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <span class="ui-text" style="color: var(--salmon);">Portfolio 2026</span>
-        <h1>Freddy Anderson Romero</h1>
-        <p>Architecting Data & Visual Intelligence</p>
-    </header>
+<header>
+<span class="ui-text" style="color: var(--salmon);">Portfolio 2026</span>
+<h1>Freddy Anderson Romero</h1>
+<p>Análisis de datos para decisiones de negocio</p>
+</header>
 
-    <div class="container">
-        
-        <section class="intro-section">
-            <div class="intro-text">
-                Built with Python, Streamlit, and AI-assisted workflows. Explorando la intersección entre el IoT, la analítica predictiva y el diseño de interfaces funcionales para la toma de decisiones críticas.
-            </div>
-        </section>
+<div class="container">
 
-        <div class="project-grid">
+<section class="intro-section">
+<div class="intro-text">
+Proyectos construidos con Python, Streamlit y flujos asistidos por IA. Mi interés: convertir datos operativos en herramientas claras para decidir — scoring comercial, control de inventario y viabilidad financiera.
+</div>
+</section>
 
-            <!-- Proyecto 1: Lead Validation -->
-            <div class="project-row">
-                <div class="project-image">
-                    <img src="semaforo.png" alt="Lead Validation System">
-                </div>
-                <div class="project-info">
-                    <div class="project-category ui-text">Algorithms & BI</div>
-                    <h2 class="project-title">Lead Validation System</h2>
-                    <p class="project-description">
-                        Una metodología algorítmica para desmitificar la prospección comercial. Este "Semáforo" de datos neutraliza el bias humano, clasificando leads con precisión matemática.
-                    </p>
-                    <div class="btn-group ui-text">
-                        <a href="https://lead-validation-dashboard-aarrbjvdsv5wzwtqchsoem.streamlit.app/" class="btn-minimal" target="_blank">Live App</a>
-                        <a href="https://github.com/AndyRimbaud/Lead-Validation-Dashboard" class="btn-minimal" target="_blank">Repository</a>
-                    </div>
-                </div>
-            </div>
+<div class="project-grid">
 
-            <!-- Proyecto 2: Inventory -->
-            <div class="project-row">
-                <div class="project-image">
-                    <img src="inventory.png" alt="Smart Inventory">
-                </div>
-                <div class="project-info">
-                    <div class="project-category ui-text">IoT & Hardware</div>
-                    <h2 class="project-title">Smart Inventory Dashboard</h2>
-                    <p class="project-description">
-                        Sincronización total entre el mundo físico y digital. Utilizando cámaras de profundidad y sensores, este sistema redefine el control de stock en tiempo real.
-                    </p>
-                    <div class="btn-group ui-text">
-                        <a href="https://inventory-ai-dashboard-xrf8fesxazrs4unt3oetgf.streamlit.app/" class="btn-minimal" target="_blank">Live App</a>
-                        <a href="https://github.com/AndyRimbaud/BI-Inventory-Dashboard" class="btn-minimal" target="_blank">Repository</a>
-                    </div>
-                </div>
-            </div>
+<!-- Proyecto 1: Lead Validation -->
+<div class="project-row">
+<div class="project-image">
+<img src="semaforo.png" alt="Lead Validation System">
+</div>
+<div class="project-info">
+<div class="project-category ui-text">Análisis Comercial · Python</div>
+<h2 class="project-title">Lead Validation System</h2>
+<p class="project-description">
+Sistema de clasificación de leads mediante reglas de scoring ponderado. Un semáforo visual que prioriza qué contactos trabajar primero y reduce el tiempo de cualificación manual. Construido con Python, Pandas y Streamlit.
+</p>
+<div class="btn-group ui-text">
+<a href="https://lead-validation-dashboard-aarrbjvdsv5wzwtqchsoem.streamlit.app/" class="btn-minimal" target="_blank">Demo</a>
+<a href="https://github.com/FreddyARomero/Lead-Validation-Dashboard" class="btn-minimal" target="_blank">Código</a>
+</div>
+</div>
+</div>
 
-            <!-- Proyecto 3: Casa do Vitorino -->
-            <div class="project-row">
-                <div class="project-image">
-                    <img src="douro.png" alt="Casa do Vitorino">
-                </div>
-                <div class="project-info">
-                    <div class="project-category ui-text">Luxury Hospitality</div>
-                    <h2 class="project-title">Casa do Vitorino Dashboard</h2>
-                    <p class="project-description">
-                        Análisis financiero y ESG para modelos de hostelería de alto nivel. Una herramienta diseñada para asegurar la rentabilidad sin comprometer el entorno ambiental.
-                    </p>
-                    <div class="btn-group ui-text">
-                        <a href="https://freddyaromero.github.io/Casa_do_Vitorino/Casa%20Do%20Vitorino/" class="btn-minimal" target="_blank">Live Site</a>
-                        <a href="https://github.com/freddyaromero/Casa_do_Vitorino" class="btn-minimal" target="_blank">Repository</a>
-                    </div>
-                </div>
-            </div>
+<!-- Proyecto 2: Inventory -->
+<div class="project-row">
+<div class="project-image">
+<img src="inventory.png" alt="Smart Inventory">
+</div>
+<div class="project-info">
+<div class="project-category ui-text">Computer Vision · Prototipo</div>
+<h2 class="project-title">Smart Inventory Dashboard</h2>
+<p class="project-description">
+Prototipo de control de inventario que combina cámara de profundidad y visión por computador para estimar stock en tiempo real, con un dashboard en Streamlit que traduce las lecturas del sensor en métricas operativas.
+</p>
+<div class="btn-group ui-text">
+<a href="https://inventory-ai-dashboard-xrf8fesxazrs4unt3oetgf.streamlit.app/" class="btn-minimal" target="_blank">Demo</a>
+<a href="https://github.com/FreddyARomero/BI-Inventory-Dashboard" class="btn-minimal" target="_blank">Código</a>
+</div>
+</div>
+</div>
 
-        </div>
-    </div>
+<!-- Proyecto 3: Casa do Vitorino -->
+<div class="project-row">
+<div class="project-image">
+<img src="douro.png" alt="Casa do Vitorino">
+</div>
+<div class="project-info">
+<div class="project-category ui-text">Trabajo Final de Máster</div>
+<h2 class="project-title">Casa do Vitorino Dashboard</h2>
+<p class="project-description">
+Modelo de viabilidad financiera y análisis ESG para un proyecto de turismo rural en el Alto Douro (Portugal), desarrollado como Trabajo Final de Máster en ADE. Incluye dashboard de indicadores de rentabilidad e impacto ambiental.
+</p>
+<div class="btn-group ui-text">
+<a href="https://freddyaromero.github.io/Casa_do_Vitorino/Casa%20Do%20Vitorino/" class="btn-minimal" target="_blank">Sitio web</a>
+<a href="https://github.com/FreddyARomero/Casa_do_Vitorino" class="btn-minimal" target="_blank">Código</a>
+</div>
+</div>
+</div>
 
-    <footer>
-        <span class="ui-text" style="display: block; margin-bottom: 2rem;">Get in touch</span>
-        <h2 style="font-size: 2rem; font-weight: normal; margin: 0;">freddyandersonromero@gmail.com</h2>
-        <p style="margin-top: 4rem; font-size: 0.8rem;">&copy; 2026 Crafted with precision and history.</p>
-    </footer>
+</div>
+</div>
+
+<footer>
+<span class="ui-text" style="display: block; margin-bottom: 2rem;">Contacto</span>
+<h2 style="font-size: 2rem; font-weight: normal; margin: 0;">freddyandersonromero@gmail.com</h2>
+<p style="margin-top: 4rem; font-size: 0.8rem;">&copy; 2026 Freddy Anderson Romero</p>
+</footer>
 
 </body>
 </html>
